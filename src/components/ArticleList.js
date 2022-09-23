@@ -1,16 +1,16 @@
 import React from "react";
 import Article from "./Article";
 
-const ArticleList = (articles) => {
+const ArticleList = ({ posts }) => {
   return (
-    <main id="articleList">
-      {articles.map((article) => {
+    <main>
+      {posts.map((post) => {
         return (
           <Article
-            key={article.id}
-            title={article.title}
-            date={article.date}
-            preview={article.preview}
+            key={post.id}
+            title={post.title}
+            date={post.date}
+            preview={post.preview}
           />
         );
       })}
@@ -18,4 +18,4 @@ const ArticleList = (articles) => {
   );
 };
 
-export default Article;
+export default ArticleList;

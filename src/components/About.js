@@ -1,10 +1,13 @@
 import React from "react";
 
-const About = (props) => {
+const About = ({ image, about }) => {
   return (
     <aside id="aside">
-      <img src={props.image} alt="blog logo" />
-      <p>{props.about}</p>
+      <img
+        src={image ? image : "https://via.placeholder.com/215"}
+        alt="blog logo"
+      />
+      <p>{about}</p>
     </aside>
   );
 };
